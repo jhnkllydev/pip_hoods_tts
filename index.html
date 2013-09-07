@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>'Hoods</title>
+        <link rel='stylesheet' type='text/css' href='' />
+        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='initial-scale=1.0 maximum-scale=1.0'>
+        <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
+        <link rel="stylesheet" href="site/leaflet.css" />
+        <link rel="stylesheet" href="site/site.css" />
+        <!-- <link rel="stylesheet" href="site/leaflet-gps.css" />
+        --><!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+        <![endif]-->
+
+        <!-- this stub is helpful for Phonegap Build to enable plugins and features. There is no phonegap.js -->
+        <script src="phonegap.js"></script>
+        <script src="site/leaflet.js"></script>
+		<script src="site/Control.TouchHover.js"></script>
+		<!-- <script src="site/leaflet-gps.js"></script> -->
+        <style>
+        html, body { width: 100%; height: 100%; margin: 0px auto; font: normal 12px/20px sans-serif; }
+        #map { width: 100%; height: 100%; }
+        #me {
+            background: #70B0E0;
+            color:#fff;
+            border-radius:5px;
+            border-width:0;
+            padding:4px;
+            font-size:14px;
+            font-weight: bold;
+            /* width: 100px; */
+            top:50px;
+            right:5px;
+            position: fixed;
+            z-index:9;
+        }
+        #hilo {
+            position: fixed;
+            bottom: 2px;
+            left: 2px;
+        }
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+        </style>
+    </head>
+    <body>
+        <!-- CREDIT Tom MacWright
+		<h1>Leaflet Point in Polygon</h1>
+        <p>a simple 'plugin' for doing point-in-polygon intersections with
+            Leaflet vector layers.
+        <a href='https://github.com/tmcw/leaflet-pip'>fork, copy, download,
+            learn about it on GitHub</a>.</p> -->
+        <div id='map'></div>
+        <button id='me'>Find Me</button>
+        <div id='hilo'></div>
+        <script src='site/hoods_clip.js'></script>
+        <script src='site/bundle.js'></script>
+    </body>
+</html>

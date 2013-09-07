@@ -1,4 +1,4 @@
-pip_hoods_tts
-=============
+pip_hoods
+=========
 
-neighborhoods - touch-hover - text-to-speech
+point-in-polygon neighborhoods (leaflet)
