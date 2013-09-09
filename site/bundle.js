@@ -6,6 +6,9 @@ var leafletPip = require('../'),
 		style: style,
 		onEachFeature: mouseHandlers
 	});
+	
+	
+var BREADCRUMBS = [ [0,0,0,0,0] ]; //lng.lat,time(ms),step_m,cumm_m	
 
 //L.tileLayer('http://a.tiles.mapbox.com/v3/tmcw.map-l1m85h7s/{z}/{x}/{y}.png')
 //L.tileLayer('http://a.tiles.mapbox.com/v3/greeninfo.map-p71hkhvk/{z}/{x}/{y}.png')
@@ -44,8 +47,9 @@ function style(feature) {
     return {
         //fillColor: getColor(feature.properties.density),
         weight: 9.5,
-        opacity: 0.25,
-        color: '#FAF4B7',
+        opacity: 0.1,
+        //color: '#FAF4B7', //yellow
+        color: '#704489', //dirple (dirty purple)
         //dashArray: '3',
         fillOpacity: 0
     };
@@ -61,7 +65,8 @@ function highlightFeature(e) {
 
     layer.setStyle({
         weight: 2,
-        color: '#FBED80',
+        //color: '#FBED80', //another yellow
+        color: '#C29ED7', //lilac dust
         dashArray: '',
         fillOpacity: 0.5
     });
