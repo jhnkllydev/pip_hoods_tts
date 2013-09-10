@@ -95,10 +95,10 @@ var myIcon = L.icon({
     //shadowAnchor: [22, 94]
 });
 var orangeIcon = L.icon({
-    iconUrl: 'site/circle3orange.png',
-    iconSize: [7, 7]
+    iconUrl: 'site/blue10.png',
+    iconSize: [10, 10]
 });
-var marker = L.marker([0,0], {icon: myIcon} ).addTo(map); //Null Island
+var marker = L.marker([0,0], {icon: myIcon, opacity: 0.4} ).addTo(map); //Null Island
 //var breadcrumbs = [];
 //breadcrumbs.push(marker);
 
@@ -108,6 +108,8 @@ document.addEventListener("deviceready", findMe, true);
 //document.getElementById('me').onclick = function() {
 document.getElementById('me').onclick = findMe();
 function findMe() {
+    map.panTo(newLatLng);
+
     document.getElementById('hilo').innerHTML = "finding";
 //navigator.geolocation.getCurrentPosition(function(pos) {
     navigator.geolocation.watchPosition(
@@ -185,7 +187,7 @@ function successCallback(pos) {
     marker.setLatLng(newLatLng); 
     
     //map.setView(newLatLng, 15);
-    map.panTo(newLatLng);
+    //map.panTo(newLatLng);
 
 }
 // end http://jsfiddle.net/CvSW4/
