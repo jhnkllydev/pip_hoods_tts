@@ -108,7 +108,7 @@ document.addEventListener("deviceready", findMe, true);
 //document.getElementById('me').onclick = function() {
 document.getElementById('me').onclick = findMe();
 function findMe() {
-    map.panTo(newLatLng);
+    //map.panTo(newLatLng);
 
     document.getElementById('hilo').innerHTML = "finding";
 //navigator.geolocation.getCurrentPosition(function(pos) {
