@@ -94,11 +94,11 @@ var myIcon = L.icon({
     //shadowSize: [68, 95],
     //shadowAnchor: [22, 94]
 });
-var orangeIcon = L.icon({
+var oldIcon = L.icon({
     iconUrl: 'site/blue10.png',
     iconSize: [10, 10]
 });
-var marker = L.marker([0,0], {icon: myIcon, opacity: 0.4} ).addTo(map); //Null Island
+var marker = L.marker([0,0], {icon: myIcon} ).addTo(map); //Null Island
 //var breadcrumbs = [];
 //breadcrumbs.push(marker);
 
@@ -182,7 +182,7 @@ function successCallback(pos) {
         document.getElementById('me').innerHTML = 'You aren\'t in hoods';
     }
 
-    var oldMarker = L.marker([pos.coords.latitude, pos.coords.longitude], {icon: orangeIcon} ).addTo(map);
+    var oldMarker = L.marker([pos.coords.latitude, pos.coords.longitude], {icon: oldIcon, opacity: 0.4} ).addTo(map);
     var newLatLng = new L.LatLng(pos.coords.latitude, pos.coords.longitude);
     marker.setLatLng(newLatLng); 
     
